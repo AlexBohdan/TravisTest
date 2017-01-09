@@ -1,0 +1,46 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'css/create_event.css' %}" rel="stylesheet">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet"
+          type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js'></script>
+</head>
+<body>
+<script>
+    $(document).ready(function () {
+                $("#event_start").datepicker(
+                        {
+                            showOtherMonths: true,
+                            selectOtherMonths: true,
+                            minDate: 0
+                        }
+                )
+            }
+    );
+</script>
+
+<div class="form_body">
+
+    <div class="event_column">
+        <input class="input_fields" id="event_name" name="event_name" type="text" placeholder="Название ивента"></br>
+        <input class="input_fields" id="event_start" name="event_start" type="text" placeholder="Начало ивента"
+               autocomplete="off"></br>
+        <textarea class="input_fields" id="event_description" name="event_description" type="text"
+                  placeholder="Описание ивента"
+                  autocomplete="off"></textarea></br>
+        <textarea class="input_fields" id="event_short_description" name="event_short_description"
+                  placeholder="Короткое описание ивента"
+                  autocomplete="off"></textarea></br>
+
+        <button class="input_fields" id="5" name="event_store" type="submit" autocomplete="off">Отправить</button>
+    </div>
+
+</div>
+
+</body>
+</html>

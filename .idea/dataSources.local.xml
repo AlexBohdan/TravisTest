@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - eveme@5.45.121.134" uuid="3857cdb4-38bd-4bdc-826b-5e928604c558">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>eveme.pg_catalog eveme.public</schema-pattern>
+      <default-schemas>eveme.public</default-schemas>
+    </data-source>
+  </component>
+</project>

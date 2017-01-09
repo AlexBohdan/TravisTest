@@ -1,0 +1,46 @@
+{# тут верстка ивента (который всплывающее оно) #}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Form</title>
+    <link href="{%static 'css/main.css' %}" rel="stylesheet">
+</head>
+<body>
+
+<div class="form_body">
+
+{#    <div class="img_column_size">#}
+{#        <img class="img_size" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR3z8zYfW79EjfScX9zEaA0gvxIuxE-TIGe9u8R-cRoMfwblYct">#}
+{#    </div>#}
+{#    <div class="event_column">#}
+{#        <a href="vk.com?id=1"><p>Sivoborodko Sergey</p></a>#}
+{##}
+{#        <p>Захід Fest</p>#}
+{##}
+{#        <p>Фестивали</p>#}
+{##}
+{#        <p>Ищу компанию людей для поездки на Zaxid Fest с 10.05 по 12.05. Писать в личные сообщения.</p>#}
+{##}
+{#    </div>#}
+
+    <div class="img_column_size">
+        <img class="img_size" src="{{ event.author.avatar }}">
+    </div>
+    <div class="event_column">
+        <a href="https://vk.com/id{{ event.author.social_id }}"><p>{{ event.author.first_name }} {{ event.author.last_name }}</p></a>
+
+        <p>{{ event.title }}</p>
+
+        <p>{{ event.short_description }}</p>
+
+        <p>{{ event.description }}</p>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>

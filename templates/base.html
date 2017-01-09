@@ -1,0 +1,61 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="http://vk.com/js/api/share.js?90" charset="windows-1251"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <meta charset="UTF-8">
+
+    <title>{% block head_title %}eveme{% endblock head_title %}</title>
+    <link href="{% static 'css/in.css' %}" rel="stylesheet">
+
+    {#    <script src="{% static 'js/main.js' %}"></script>#}
+    {#    <link rel="stylesheet" type="text/css" href="{% static 'fonts/basil.css' %}">#}
+</head>
+<body>
+{% include 'messages.html' %}
+
+{# header #}
+{# мб навбар сюда же ебануть #}
+<header>
+
+    <div class="menu">
+        <div class="categories">
+            <div class="categories-position">
+                {% for category in categories %}
+                    <input id="{{ forloop.counter }}" type="checkbox" name="{{ forloop.counter }}">
+                    <label for="{{ forloop.counter }}">{{ category.title }}</label>
+                {% endfor %}
+            </div>
+        </div>
+
+        {#        <div class="town">#}
+        {#            <input class="town_field" type="text" placeholder="Введите город">#}
+        {#        </div>#}
+
+        {% if user.is_authenticated %}
+
+
+            <a href="/logout">Выйти</a>
+        {% else %}
+            <div class="footer_soc_networks" id="sign_in_soc_enter">
+                <a href="{% url 'social:begin' 'vk-oauth2' %}" class="footer_soc_network">
+                    <b>Войти</b>
+                </a>
+            </div>
+        {% endif %}
+    </div>
+</header>
+
+{% block content %} {% endblock %}
+
+{# footer #}
+<footer></footer>
+
+<div id="modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+    </div>
+</div>
+</body>
+</html>

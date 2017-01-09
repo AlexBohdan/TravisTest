@@ -1,0 +1,11 @@
+{# ТУТ СПИСОК ИВЕНТОВ с фильтрами и прочим говном #}
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block head_title %}
+    {{ block.super }} | Список событий
+{% endblock %}
+
+{% block content %}
+    {{ filter.form.as_p }}
+{% endblock %}

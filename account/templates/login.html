@@ -1,0 +1,15 @@
+{% block content %}
+
+    <div id="body" class="sign_in_body">
+        <span class="sign_in_head">Вход на сайт</span>
+
+        <div class="footer_soc_networks" id="sign_in_soc_enter">
+            <a href="{% url 'social:begin' 'vk-oauth2' %}" class="footer_soc_network">
+                <b>B</b>
+            </a>
+        </div>
+
+    </div>
+
+
+{% endblock %}

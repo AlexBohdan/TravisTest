@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2719728773">
+    <data-source source="LOCAL" name="PostgreSQL - eveme@5.45.121.134" uuid="3857cdb4-38bd-4bdc-826b-5e928604c558">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://5.45.121.134:5432/eveme</jdbc-url>
+    </data-source>
+  </component>
+</project>
